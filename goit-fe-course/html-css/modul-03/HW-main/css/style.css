@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: url(../img/main-bg.png) no-repeat center fixed;
+  background-size: cover;
+}
+
+.wrapper{
+  width: 480px;
+  margin: 240px auto;
+  padding: 50px 30px;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-family: 'Pathway Gothic One';
+  color: #263555;
+}
+
+.header-img{
+  width: 100%;
+  height: 100px;
+  margin-bottom: 25px;
+  background: #ccc url(../img/hdr-img.png);
+}
+
+article, hr, h2{
+  margin-bottom: 25px;
+}
+
+h4{
+  margin-bottom: 15px;
+}
+
+.foot-left{
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+}
+
+.item{
+  list-style: none;
+  margin: 10px;
+}
+
+.item a{
+  text-decoration: none;
+  color: #263555;
+}
+
+.item a:hover{
+  text-decoration: underline;
+}
