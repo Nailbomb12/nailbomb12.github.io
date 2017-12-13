@@ -80,6 +80,12 @@ body {
 .menu-link:hover {
   color: #263555;
 }
+.logo {
+  background-color: #fff;
+  display: inline-block;
+  padding: 50px 35px;
+  border-radius: 75px;
+}
 
 /*-----------MAIN------------*/
 
@@ -125,13 +131,37 @@ body {
   position: absolute;
   left: 40px;
   bottom: 40px;
-  background-color: #38afe5;
+  /*background-color: #38afe5;
   padding: 30px 20px;
-  border-radius: 50px;
+  border-radius: 50px;*/
 }
 .left, .right {
   display: inline-block;
+  background-color: #38afe5;
+  /*padding: 30px 20px;*/
+  border-radius: 50px 0 0 50px;
+  
 }
+.left {
+  padding: 30px 5px 30px 20px;
+}
+.right {
+  border-radius: 0 50px 50px 0;
+  padding: 30px 20px 30px 5px;
+}
+.left:hover {
+  background-color: rgba(56, 175, 229, 0.6);
+}
+.right:hover {
+  background-color: rgba(56, 175, 229, 0.6);
+}
+.left::before {
+  content: url(../img/left.png);
+}
+.right::after {
+  content: url(../img/right.png);
+}
+
 /*----------------section---------------------*/
 
 .section {
