@@ -1,49 +1,40 @@
 body {
-  background: url(../img/body-bg.png)  center center no-repeat;
+  background-image: url(../img/body-bg.png);
   background-size: cover;
 }
-
 .wrapper {
   max-width: 1025px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
-
-/*------HEADER---------*/
-
 .header {
-  padding: 50px 0;
+  padding: 50px 50px;
   margin-bottom:10px;
-  text-align: center;
+}
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
 }
 .menu-item {
-  display: inline-block;
-  vertical-align: middle;
   position: relative;
 }
-.menu-item:nth-child(2)::before {
-    content: "";
-    display: inline-block;
-    border-style: solid;
-    border-width: 7px 7px 0 7px;
-    border-color: #fff transparent transparent transparent;
-    position: absolute;
-    bottom:-10px;
-    left: 45%;
+.menu-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Pathway Gothic One';
+  font-size: 28px;
+  text-decoration: none;
+  padding: 8px 25px;
 }
-.menu-item:nth-child(2):hover::before {
-    content: "";
-    display: inline-block;
-    border-style: solid;
-    border-width: 0 7px 7px 7px;
-    border-color: transparent transparent #fff transparent;
-    position: absolute;
-    bottom:-7px;
-    left: 45%;
+.menu-link:hover {
+  color: #263555;
 }
-.submenu {
+.submenu{
   display: none; 
   position: absolute;
-  left: 15px;
+  left: 10px;
   top: 40px;
   list-style: none;
   background-color: #fff;
@@ -59,7 +50,7 @@ body {
   color: #6b7488;
   font-family: 'Pathway Gothic One';
   display: inline-block;
-  padding:5px 15px;
+  padding:5px 20px;
 }
 .submenu-item:hover {
   background-color: #6b7488;
@@ -67,34 +58,40 @@ body {
 .submenu-link:hover {
   color: #fff;
 }
-
-.menu-link {
-  color: #fff;
-  text-transform: uppercase;
-  font-family: 'Pathway Gothic One';
-  font-size: 28px;
-  text-decoration: none;
-  padding: 8px 25px;
+.menu-item:nth-child(2)::before {
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 7px 7px 0 7px;
+  border-color: #fff transparent transparent transparent;
+  position: absolute;
+  bottom:-10px;
+  left: 45%;
 }
-.menu-link:hover {
-  color: #263555;
+.menu-item:nth-child(2):hover::before {
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 0 7px 7px 7px;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  bottom:-7px;
+  left: 45%;
 }
 .logo {
   background-color: #fff;
-  display: inline-block;
+  display: inline-block; 
   padding: 50px 35px;
   border-radius: 75px;
 }
 
-/*-----------MAIN------------*/
+/*---slider---*/
 
 .main {
   padding: 60px;
   background-color: #fff;
   position: relative;
 }
-
-/*---------SLIDER------------*/
 
 .slider {
   position: relative;
@@ -116,7 +113,6 @@ body {
   font-size: 22px;
   font-weight: 600;
   display: inline-block;
-  /*border-left: 1px solid #ededee;*/
   box-shadow: 0 2px 0px 1px rgba(237, 237, 238, 0.8)
 }
 .big-title {
@@ -130,14 +126,10 @@ body {
   position: absolute;
   left: 40px;
   bottom: 40px;
-  /*background-color: #38afe5;
-  padding: 30px 20px;
-  border-radius: 50px;*/
 }
 .left, .right {
   display: inline-block;
   background-color: #38afe5;
-  /*padding: 30px 20px;*/
   border-radius: 50px 0 0 50px;
   
 }
@@ -155,16 +147,17 @@ body {
   background-color: rgba(56, 175, 229, 0.6);
 }
 .left::before {
-  content: url(../img/left.png);
+  content: url(../img/home/left.png);
 }
 .right::after {
-  content: url(../img/right.png);
+  content: url(../img/home/right.png);
 }
 
-/*----------------section---------------------*/
+/*---section---*/
+
 
 .section {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 .section-title {
   font-family: 'Pathway Gothic One';
@@ -173,16 +166,12 @@ body {
   margin-bottom: 50px;
 }
 .section-wrap {
-  font-size: 0;
+  display: flex;
+  justify-content: space-between;
 }
 .figure {
-  float: left;
-  width: 32%;
-  margin-right: 2%;
   position: relative;
-}
-.figure:last-child {
-  margin-right: 0;
+  flex-basis: 32%;
 }
 .figure-img {
   height: 100%;
@@ -225,18 +214,99 @@ body {
 .figure:hover > .sect-article {
   display: block;
 }
-
-/*-----------------TO TOP BUTTON-------------*/
-
-.top {
+.to-top {
   position: fixed;
   right: 13%;
   bottom: 20px;
+  background-color: #38afe5;
+  display: inline-block;
+  padding: 5px 10px 10px 10px;
+  border-radius:15px;
+}
+.to-top:hover {
+  filter: brightness(80%);
 }
 
 
+/*--------footer-------*/
 
+.contacts {
+  background-color: #30455b;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 30px 150px;
+}
+.contact-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-transform: uppercase;
+  list-style: none;
+  flex-basis: 100%;
+  color: #fff;
+}
+.contact-item {
+  flex-basis: 25%;
+}
+.contact-link {
+  text-decoration: none;
+  color: #fff;
+}
+.contact-link:hover {
+  color: #5abce9;
+}
+.address {
+  font-size: 12px;
+  font-family: 'Arial';
+  text-transform: none;
+  line-height: 1.5;
+}
+.social {
+  padding: 40px;
+}
+.social-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px
+}
+.social-item {
+  padding:0 5px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/footer/social-sprite.png);
+}
+.social-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+.social-item:hover { 
+  filter: brightness(80%)
+          sepia(40%);
+} 
+.twit {
+  background-position: -70px -70px;
+}
+.fb {
+  background-position: -10px -10px;
+}
+.googl {
+  background-position: -70px -10px;
+}
+.in {
+  background-position: -10px -70px;
+}
 
-
-
-
+.copywrite {
+  color: #fff;
+  text-align: center;
+  font-family: 'Arial';
+  font-size: 12px;
+}
+.copy-link {
+  color: #fff;
+  text-decoration: none;
+}
+.copy-link:hover {
+  color: #263555;
+}
