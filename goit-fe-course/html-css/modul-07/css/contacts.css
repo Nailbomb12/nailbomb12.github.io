@@ -1,0 +1,88 @@
+.contact-section {
+  flex-basis: 72%;
+}
+.map {
+  width: 440px;
+  height: 420px;
+  float: left;
+  margin-right: 20px;
+  border: none;
+}
+.contact-address {
+  color: #666565;
+  font-size: 13px;
+  font-family: 'Arial Regular';
+  margin-bottom: 30px;
+}
+.address-table tr td {
+  padding: 2px 0;
+}
+.address-table tr td:nth-child(2) {
+  padding-left: 13px;
+}
+.first-address {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.second-address {
+  line-height: 1.5;
+}
+.mail-link {
+  color: #fa7e7e;
+  text-decoration: none;
+}
+.mail-link:hover {
+  color: #38afe5;
+  text-decoration: underline;
+}
+.sidebar {
+  flex-basis: 24%;
+}
+.contact-form {
+  box-sizing: border-box;
+}
+.form-item {
+  width: 100%;
+  display:inline-block;
+  font-size: 13px;
+  padding: 5px 5px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+input[type="text"] {
+  padding: 5px 5px;
+}
+.textarea {
+  height: 233px
+}
+.cont_btn {
+  font-size: 15px;
+  background-color: #fbf6f8;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border:1px solid #b0adad;
+  float: right;
+  margin-left: 20px;
+}
+.cont_btn:hover {
+  cursor: pointer;
+  background-color: #38afe5;
+  color: #fff;
+}
+.section-wrap {
+  margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
