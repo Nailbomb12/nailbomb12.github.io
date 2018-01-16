@@ -331,11 +331,12 @@ body {
   .contacts {
     padding: 30px 50px;
   }
+}
 @media (max-width: 600px) {
   .contacts {
     padding: 20px;
   }
-
+}
 @media (max-width: 480px) {
   .contacts {
     flex-wrap:wrap;
@@ -377,37 +378,3 @@ body {
     background: url(../img/footer/css_sprites.png) -10px -10px;
   }  
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
