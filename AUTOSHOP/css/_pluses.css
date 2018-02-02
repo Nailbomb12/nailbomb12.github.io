@@ -1,0 +1,8 @@
+.pluses {
+  padding: 40px 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  /* line-height: 2; */ }
+  @media (min-width: 768px) {
+    .pluses {
+      padding: 20px 60px; } }

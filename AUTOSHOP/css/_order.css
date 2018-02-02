@@ -1,0 +1,7 @@
+.order {
+  padding: 40px 40px;
+  margin: 0 auto;
+  margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    .order {
+      padding: 20px 60px; } }

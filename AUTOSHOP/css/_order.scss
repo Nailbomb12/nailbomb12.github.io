@@ -1,0 +1,134 @@
+.order {
+  padding: 0 30px;
+  @media (min-width: 768px) {
+    padding: 0 60px;
+  }
+}
+.order-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: baseline; */
+  }
+}
+.order__item {
+  flex-basis: 44%;
+  position: relative;
+}
+.order__item:first-child {
+  margin-bottom: 80px;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+.order__img {
+  width: 100%;
+  height: auto;
+  @media (min-width: 768px) {
+  transform: rotateY(180deg)
+  }
+}
+.order__item .extra-price {
+  left: -25px;
+  bottom: -10px;
+  @media (min-width: 768px) {
+    width: 110px;
+    height: 110px;
+    left: 280px;
+    bottom: -50px;
+    /* right: 20px; */
+  }
+}
+.order__item .extra-price__numb {
+  top: 25px;
+  left: 28px;
+  transform: rotate(22deg);
+  @media (min-width: 768px) {
+    font-size: 18px;
+    top: 30px;
+    left: 30px;
+  }
+}
+
+.form .user {
+  font-size: 14px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  width: 280px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  @media (min-width: 1024px) {
+    width: 320px;
+  }
+}
+.form .phone {
+  font-size: 14px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  width: 280px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  @media (min-width: 1024px) {
+    width: 320px;
+  }
+}
+.order__item .center {
+  text-align: center;
+}
+
+.order__item .timer__items {
+  /* font-size: 24px; */
+}
+
+.product_bottom {
+  max-width: 320px;
+}
+
+
+/* .extra-price {
+  width: 95px;
+  height: 95px;
+  background-image: url(../img/extra-price.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: -25px;
+  bottom: -10px;
+}
+
+.extra-price__numb {
+  position: absolute;
+  color:#fff;
+  top: 20px;
+  left: 25px;
+  font-size: 14px;
+  transform: rotate(15deg);
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 18px;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

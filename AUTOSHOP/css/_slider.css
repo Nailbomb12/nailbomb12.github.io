@@ -1,0 +1,9 @@
+.reviews {
+  padding: 40px 30px;
+  /* line-height: 2; */ }
+  @media (min-width: 768px) {
+    .reviews {
+      padding: 20px 60px; } }
+
+.slider__img {
+  float: left; }

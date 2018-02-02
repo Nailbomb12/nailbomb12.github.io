@@ -1,0 +1,5 @@
+.product {
+  width: 100%;
+  height: calc(100vh-100px);
+  background-color: #333;
+  background-image: url(img/main-bg.png); }

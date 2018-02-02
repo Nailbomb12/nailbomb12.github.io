@@ -1,0 +1,74 @@
+.reviews {
+  padding: 0 40px;
+  margin: 0 auto; 
+  margin-bottom: 50px;
+  /* line-height: 2; */
+  @media (min-width: 768px) {
+    padding: 0 60px;
+  }
+}
+.slider {
+  max-width: 550px;
+  margin:0 auto; 
+  font-size: 14px;
+  @media (min-width: 1024px) {
+    max-width: 1000px;
+  }
+}
+.slider__img-wrap {
+  @media (min-width: 1024px) {
+    float: left;
+    width: 270px;
+    height: auto;
+    box-sizing: border-box;
+    margin-right: 30px;
+  }
+}
+.slider__img {
+  border: 5px solid $yellow;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.slider__dots {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.slider__item {
+  width: 10px;
+  height: 10px;
+  background-color: $yellow;
+  border: 3px solid #333;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.slider__item:active {
+  border-color: $yellow;
+}
+
+.slider__text {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.slider__user {
+  vertical-align: middle;
+  font-size: 13px;
+  @media (min-width: 1024px) {
+    text-align: right;
+  }
+}
+.slider__avatar {
+  border-radius: 40px;
+  display: inline-block;
+  margin-right: 15px;
+}
+.slider__user-text {
+  margin-top: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+
