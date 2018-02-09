@@ -1,0 +1,123 @@
+.header {
+  padding: 50px 50px;
+  margin-bottom:10px;
+  @media (max-width: 895px) {
+    padding: 40px 15px;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  @media (max-width: 895px) {
+    flex-wrap: wrap;
+  }
+  @media (max-width: 768px) {
+    max-width: 350px;
+    margin: 0 auto;
+    height: 270px;
+  }
+}
+%arrow {
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  position: absolute;
+}  
+.menu__item {
+  position: relative;
+  &:nth-child(2)::before {
+    @extend %arrow;
+    border-width: 7px 7px 0 7px;
+    border-color: #fff transparent transparent transparent;
+    bottom:-10px;
+    left: 45%;
+  }
+  &:nth-child(2):hover::before {
+    @extend %arrow;
+    border-width: 0 7px 7px 7px;
+    border-color: transparent transparent #fff transparent;
+    bottom:-7px;
+    left: 45%;
+  }
+  @media (max-width: 895px) {
+    &:not(.logo__item) {
+      order: 1;
+    }
+  }
+}
+.menu__link {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Pathway Gothic One';
+  font-size: 28px;
+  text-decoration: none;
+  padding: 8px 25px;
+  &:hover {
+    color: $active-color;
+  }
+  @media (max-width: 895px) {
+    font-size: 24px;
+    padding: 15px 10px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 20px;
+    padding-bottom: 10px;
+  }
+}
+.menu__submenu{
+  display: none; 
+  position: absolute;
+  left: 10px;
+  top: 40px;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 3px;
+  @media (max-width: 895px) {
+    left: -5px;
+    top: 35px;
+  }
+  @media (max-width: 768px) {
+    background-color: #f2f2f3;
+    left: 2px;
+    top: 35px;
+  }
+}
+.menu__item:hover > .menu__submenu{
+  display: block;
+  z-index: 7;
+}
+.menu__submenu-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 20px;
+  color: $active-color;
+  font-family: 'Pathway Gothic One';
+  display: inline-block;
+  padding:5px 20px;
+  &:hover {
+    color: #fff;
+  }
+}
+.menu__submenu-item:hover {
+  background-color: $active-color;
+}
+
+.logo__link {
+  background-color: #fff;
+  display: inline-block; 
+  padding: 50px 35px;
+  border-radius: 75px;
+}
+@media (max-width: 895px) {
+  .logo__item {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #logo {
+    padding: 45px 30px;
+  }
+}

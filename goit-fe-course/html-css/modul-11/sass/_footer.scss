@@ -1,0 +1,132 @@
+.contacts {
+  background-color: $active-color;
+  font-family: $font, sans-serif;
+  padding: 30px 140px;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 776px) {
+    padding: 30px 50px;
+  }
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
+  @media (max-width: 480px) {
+    flex-wrap:wrap;
+  }
+  &__left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-transform: uppercase;
+    list-style: none;
+    flex-basis: 80%;
+    color: #fff;
+    @media (max-width: 480px) {
+      flex-basis: 100%;
+    }
+  }
+}
+.contact__right {
+  flex-basis: 25%;
+  text-transform: uppercase;
+  font-family: $font, sans-serif;
+  list-style: none;
+  color: #fff;
+  @media (max-width: 480px) {
+    order: 1;
+    flex-basis: 100%;
+    margin-top: 10px;
+  }
+}
+.contacts__left-item {
+  flex-basis: 33%; 
+  padding-bottom: 1px;
+}
+.contacts__link {
+  text-decoration: none;
+  color: #fff;
+}
+.contacts__link--hover:hover {
+  color: #5abce9;
+}
+.contacts__address {
+  font-size: 12px;
+  font-family: $copywr-font;
+  text-transform: none;
+  line-height: 1.5;
+}
+.social {
+  padding: 40px;
+  &__menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px
+  }
+  &__item {
+    padding: 0 5px;
+    width: 40px;
+    height: 40px;
+  }
+  &__link {
+    display: inline-block;
+    border-radius: 50%;
+  }
+  &__icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    stroke-width: 0;
+    stroke: black;
+    fill: #fff;
+  }
+}
+.social__icon--mod:hover {
+  fill: $active-color;
+}
+.social__copywrite {
+  color: #fff;
+  text-align: center;
+  font-family: $copywr-font;
+  font-size: 12px;
+}
+.social__copywrite-link {
+  color: #fff;
+  text-decoration: none;
+}
+.social__copywrite-link:hover {
+  color: $active-color;
+}
+
+@media (max-width: 480px) {
+  .contact__right-item {
+    float: left;
+  }
+  
+  .contacts__address {
+    margin-top: 4px;
+  }
+  .contacts__address>br {
+    display: none;
+  }
+  .contacts__tel::before {
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    width: 10px; height: 17px;
+    background: url(../img/footer/css_sprites.png) -10px -44px; 
+  }
+  .contacts__mail::before {
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 8px;
+    width: 18px; height: 14px;
+    background: url(../img/footer/css_sprites.png) -10px -10px;
+  }  
+   .contact_us {
+    margin-top: 4px;
+    margin-right: 13px;
+  }
+}
+
