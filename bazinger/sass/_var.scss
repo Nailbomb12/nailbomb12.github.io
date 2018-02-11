@@ -1,0 +1,8 @@
+$blue-color: #4bcaff;
+$grey-color: #414042;
+$text-color: #838383;
+
+@function to-rem($size){
+  $result: $size / 16px;
+  @return #{$result}rem;
+}
