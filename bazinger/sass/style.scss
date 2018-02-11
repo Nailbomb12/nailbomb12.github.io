@@ -20,7 +20,7 @@ a:visited {
 }
 a:focus, a:active {
 	color: #fff;
-  text-decoration: underlien    ;
+  text-decoration: underlien;
 }
 
 /*header part*/
@@ -31,9 +31,6 @@ a:focus, a:active {
   z-index:  1;
   width: 100%;
   min-width: 320px;
-  @media (max-width: 768px) {
-    /* background: none; */
-  }
 }
 .wrapper {
   max-width: 1170px;
@@ -204,7 +201,6 @@ a:focus, a:active {
   display: inline-block;
   width: 70px;
   height: 70px;
-  fill: #fff;
   margin-top: 45px;
 }
 .article__title {
@@ -319,9 +315,6 @@ a:focus, a:active {
     background-color: #1ea6de;
     box-shadow: none;
     cursor: pointer;
-  }
-  &:focus {
-    box-shadow: 0 5px 10px (#fff, 0.5);         
   }
 }
 
