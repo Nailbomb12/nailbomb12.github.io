@@ -224,18 +224,21 @@ a {
   background-image: url(../img/bg.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 0; }
-  .slider::before {
-    content: '';
+  background-position: 50% 0;
+  /*   &::before {
+    content:'';
     display: block;
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
-    background-color: transparent; }
-  @media (max-width: 622px) {
-    .slider::before {
-      background-color: rgba(0, 0, 0, 0.4); } }
+    top:0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  @media(max-width: 622px) {
+    &::before {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  } */ }
 
 .slider__slogan {
   color: #f45a40;
