@@ -1,0 +1,18 @@
+$red-color: #f45a40;
+$grey-color: #67686d;
+$light-grey: #7e7f84;
+$border-color: #eee;
+
+
+
+@function to-rem($pix){
+  $result: $pix / 16px ;
+  @return #{$result}rem;
+}
+
+@mixin foot-form {
+  font-size:12px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: none;
+}
