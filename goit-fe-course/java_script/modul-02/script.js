@@ -58,11 +58,12 @@ let members = prompt('Введите число участников групп�
 let sharm = 15;
 let hurgada = 25;
 let taba = 6;
-var proffer, lastLet, memberLen;
 
 //Чтобы слово "место" в сообщении выводилось в нужном падеже, в зависимости от введенного значения
-memberLen = members.length;
-lastLet = members.charAt(memberLen - 1);
+var proffer, lastLet, memberLen;
+var stringMembers = String(members);
+memberLen = (stringMembers.length);
+lastLet = (stringMembers.charAt(memberLen - 1));
 
 if (lastLet == 1){
   var normWord = 'место';
