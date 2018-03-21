@@ -10,19 +10,19 @@ const keyboard = addKeyboardLayout(alphabet);
 
 console.log(keyboard)
 
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+function getRandomInt(index) {
+  return Math.floor(Math.random() * index);
 }
 
 const anyCharacter = function getRandCharInRow(row) {
-  const randomSymb = getRandomInt(0, keyboard[row].length);
+  const randomSymb = getRandomInt(keyboard[row].length);
   return keyboard[row][randomSymb];
 }
 
 console.log(`Random symbol on a row "${anyCharacter(2)}"`);
 
 function getRandCharInAlph() {
-  const randomString = getRandomInt(0, keyboard.length);
+  const randomString = getRandomInt(keyboard.length);
   return anyCharacter(randomString);
 }
 
