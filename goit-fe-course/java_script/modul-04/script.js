@@ -2,28 +2,28 @@ const alphabet = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
 
 function addKeyboardLayout(alphabet) {
   const alphabetArr = alphabet.split('');
-  const firstLine = alphabetArr.slice(0, alphabetArr.indexOf('a'));
-  const secondLine = alphabetArr.slice(alphabetArr.indexOf('a'), alphabetArr.indexOf('z'));
-  const thirdLine = alphabetArr.slice(alphabetArr.indexOf('z'));
-  const lineArray = [firstLine, secondLine, thirdLine];
-    return lineArray;
+  const lineArray = [alphabetArr.slice(0, alphabetArr.indexOf("a")), alphabetArr.slice(alphabetArr.indexOf("a"), alphabetArr.indexOf("z")),                   alphabetArr.slice(alphabetArr.indexOf("z"))];
+  return lineArray;
 }
 
 const keyboard = addKeyboardLayout(alphabet);
 
 console.log(keyboard)
 
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
-function getRandCharInRow(row) {
-  const randomSymb = Math.floor(Math.random() * keyboard[row].length);
+const anyCharacter = function getRandCharInRow(row) {
+  const randomSymb = getRandomInt(0, keyboard[row].length);
   return keyboard[row][randomSymb];
 }
 
-console.log(`Random symbol on a row "${getRandCharInRow(2)}"`);
+console.log(`Random symbol on a row "${anyCharacter(2)}"`);
 
-function getRandCharInAlph(keyboard) {
-  const randomString = Math.floor(Math.random() * keyboard.length);
-  return getRandCharInRow(randomString);
+function getRandCharInAlph() {
+  const randomString = getRandomInt(0, keyboard.length);
+  return anyCharacter(randomString);
 }
 
 console.log(`Random keyboard symbol  "${getRandCharInAlph(keyboard)}"`);
