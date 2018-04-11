@@ -69,8 +69,8 @@ function getRandCharInAlph (obj){
 	let currentLangValue = Object.values(obj.layouts[obj.currentLang]);
   let randRow = getRandomInt(currentLangValue);
   let randSymb = getRandomInt(currentLangValue[randRow]);
-  return currentLangValue[randRow][randSymb];
+  
+  console.log(`${currentLangValue[randRow][randSymb]} - случайный символ из алфавита ${keyboard.currentLang}`)
 }
 getRandCharInAlph(keyboard);
 
-console.log(`${getRandCharInAlph(keyboard)} - случайный символ из алфавита ${keyboard.currentLang}`)
