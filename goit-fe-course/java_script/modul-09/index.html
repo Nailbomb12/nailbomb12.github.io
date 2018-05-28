@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Mod-09</title>
+</head>
+<body>
+  <div class="wrapper"></div>
+
+  <script type="text/template" id="keyb_template">
+    <% for (let i = 0; i < keybRows.length; i++) { %>
+        <div class="row">
+      <% for (let j = 0; j < keybRows[i].length; j++) { %>
+        <div class="button"><%- keybRows[i][j] %></div>
+        <% } %> </div>
+    <% } %>
+        <div class="row">
+          <div class="button space_btn"></div>
+        </div>
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>
