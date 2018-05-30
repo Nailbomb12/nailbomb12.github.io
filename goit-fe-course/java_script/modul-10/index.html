@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .wrapper{
+    width: 400px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 2px solid #333;
+    background-color: #A5D4FF;
+  }
+  .timer, .exercise, .keyboard, .timer_wrap{
+    margin-bottom: 10px;
+  }
+  .keyboard{
+    user-select: none;
+  }
+  #inp_text {
+    padding: 6px;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <p class="timer_wrap">Timer: <span class="timer">0.00</span></p>
+    <div class="exercise">Your best result: <span class="score"></span> seconds</div>  
+    <div class="keyboard"></div>
+    <input type="text" id='inp_text'>
+  </div>
+  
+  <script src='script.js'></script>
+</body>
+</html>
