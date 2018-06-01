@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #333;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 6px;
+}
+.block{
+  margin-bottom: 20px; 
+}
+input {
+  padding: 6px;
+  /* margin-bottom: 20px; */
+  width: 250px;
+}
+#editId{
+  margin-bottom: 20px;
+}
+.table-wrap{
+  max-width: 600px;
+  margin: 0 auto;
+}
+.table{
+  /* padding: 0 20px; */
+}
+.table th  {
+  width: 200px;
+  background-color: #AAFFAE;
+  padding:0
+}
+.table td{
+  text-align: center;
+  background-color: #D2FFE0;
+}
+.allBtn{
+  margin-bottom: 20px;
+  width: 250px;
+  /* margin: 0 auto; */
+  
+}
