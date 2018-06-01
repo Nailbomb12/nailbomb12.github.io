@@ -1,4 +1,3 @@
-//const resTable = document.querySelector('.resultTable');
 const tmpl = document.querySelector('#template-part');
 const html = document.querySelector('#tbl_tmpl').textContent.trim();
 const compiled = _.template(html);
@@ -9,7 +8,6 @@ const createTable = (userObj) => {
   userObj.forEach((item) => {
     structure += compiled(item);
   });
-  //resTable.style.display = 'table';
   tmpl.innerHTML = structure;
 };
 
@@ -75,7 +73,6 @@ const removeUser = (id) => {
     method: 'DELETE',
   })
     .then(() => {
-      //idToRemove.value = '';
       alert ('User deleted');
     });
 };
