@@ -1,0 +1,1 @@
+"use strict";console.log("My  first gulp operatioon"),console.log("Nice try");var a="Fucking ",b="awesome",concat=function(o,c){return o+c};concat(a,b);
