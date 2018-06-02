@@ -22,6 +22,7 @@ const getAllUsers = () => {
     })
     .then(users => {
       createTable(users.data);
+      console.log(users.data)
     });
 }
 
@@ -36,6 +37,7 @@ const getUserById = (id) => {
     })
     .then(user => {
       tmpl.innerHTML = compiled(user.data);
+      idInput.value = '';
     })
     .catch(error => {
       console.error("Error: ", error);
@@ -62,6 +64,8 @@ const addUser = (name, age) => {
   })
     .then(() => {
       alert ('User added');
+      newName.value = ''; 
+      newAge.value = '';
     })
 }
 
@@ -74,6 +78,7 @@ const removeUser = (id) => {
   })
     .then(() => {
       alert ('User deleted');
+      idToRemove.value = '';
     });
 };
 
@@ -99,6 +104,9 @@ const updateUser = (id) => {
   })
   .then(() => {
     alert('Data updated');
+    editId.value = '';
+    changeName.value = '';
+    changeAge.value = '';
   });
 };
 
