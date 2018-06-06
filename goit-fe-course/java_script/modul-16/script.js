@@ -23,7 +23,6 @@ class Shape {
   }
 }
 
-
 class Rectangle extends Shape {
   constructor (color, initX, initY, initWidth, initHeight){
     super(color, initX, initY);
@@ -47,7 +46,6 @@ class Rectangle extends Shape {
   }
 }
 
-
 class Circle  extends Shape {
   constructor (color, initX, initY, initRadius){
     super(color, initX, initY);
@@ -69,21 +67,3 @@ class Circle  extends Shape {
 const rectangle = new Rectangle('#009688', 10, 10, 100, 100);
 const circle = new Circle('#FF5722', 50, 50, 250);
 console.log(rectangle.draw(), circle.draw());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
