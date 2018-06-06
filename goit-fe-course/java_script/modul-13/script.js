@@ -14,8 +14,8 @@ const showMessage = (results) => {
   });
 };
 
-const firstNameReg = /^[a-zа-яё]{1,}(?: [a-zа-яё]{1,}){0,2}?$/i;
-const lastNameReg = /^[a-zа-яё_-]{1,}(?: [a-zа-яё]{1,})?$/i;
+const firstNameReg = /^[a-zа-яё]{3,}(?: [a-zа-яё]{1,}){0,2}?$/i;
+const lastNameReg = /^[a-zа-яё_-]{3,}(?: [a-zа-яё]{1,})?$/i;
 const telReg = /^\+?(38)?0{1}[1-9]{1}[0-9]{8}$/;
 
 const validate = () => {
