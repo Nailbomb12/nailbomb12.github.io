@@ -5,15 +5,15 @@ class Shape {
     this.initY = initY;
   }
   
-  get getColor(){
-   return this.color;
+  getColor(){
+    return this.color;
   }
   
   setColor(val){
     this.color = val;
   }
   
-  get getCoords() {
+  getCoords() {
     return [this.initX, this.initY]
   }
   
@@ -35,20 +35,20 @@ class Rectangle extends Shape {
   }
   
   setHeight(newHeight){
-    this.initHeight = newHeight;
+    this.initHeight = newHeight;  
   }
   
-  get getDims(){
+  getDims(){
     return [this.initWidth, this.initHeight]
   }
   draw(){
     console.log(
     `Drawing a Rectangle at:
-  (x : ${this.getCoords[0]}, y : ${this.getCoords[1]}) 
+  (x : ${this.getCoords()[0]}, y : ${this.getCoords()[1]}) 
 With dimentions:
-  width : ${this.getDims[0]}
-  height : ${this.getDims[0]}
-Filled with color: ${this.getColor}`)
+  width : ${this.getDims()[0]}
+  height : ${this.getDims()[1]}
+Filled with color: ${this.getColor()}`)
   }
 }
 
@@ -58,7 +58,7 @@ class Circle  extends Shape {
     this.initRadius = initRadius;
   }
   
-  get getRadius(){
+  getRadius(){
     return this.initRadius;
   }
   
@@ -68,10 +68,10 @@ class Circle  extends Shape {
   draw(){
     console.log(
     `Drawing a Circle at:
-  (x : ${this.getCoords[0]}, y : ${this.getCoords[1]})
+  (x : ${this.getCoords()[0]}, y : ${this.getCoords()[1]})
 With dimentions:
-  radius: ${this.getRadius}
-Filled with color: ${this.getColor}`)
+  radius: ${this.getRadius()}
+Filled with color: ${this.getColor()}`)
   }
 }
 
