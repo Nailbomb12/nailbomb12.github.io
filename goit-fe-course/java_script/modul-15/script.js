@@ -3,7 +3,8 @@ class Timer {
     this.startTime = startTime;
     this.stopTime = stopTime;
     this.interval = interval;
-  }
+  } 
+
   start() {
     this.startTime = Date.now();
   }
@@ -14,7 +15,7 @@ class Timer {
   getTime() {
     console.log(`${this.interval} seconds.`);
   }
-  static get timeToNY() {
+  static timeToNY() {
     const today = new Date();
     const mskInDay = 24*60*60*1000;
     const nextYear = new Date(today.getFullYear(), 11, 31, 23, 59, 59, 999);
@@ -22,7 +23,11 @@ class Timer {
   }
 }
 
-const stopwatch = new Timer();
+const stopwatch = new Timer('11:00', '13:00', 50);
+const oneTimer = new Timer('0:00', '0:05', '5');
+const otherTimer = new Timer('0:01', '0:03', '2');
+const anotherTimer = new Timer('0:02', '0:05', '3');
+console.log(oneTimer, otherTimer, anotherTimer);
 
 const onClick = (evt) => {
   if (evt.target.classList.contains('start-btn')) {
@@ -34,5 +39,5 @@ const onClick = (evt) => {
   }
 };
 
-console.log(`${Timer.timeToNY} days before the New Year`);
+console.log(`${Timer.timeToNY()} days before the New Year`);
 document.addEventListener('click', onClick);
