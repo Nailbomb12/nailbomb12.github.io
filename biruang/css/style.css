@@ -310,7 +310,10 @@ a {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch; }
   @media (max-width: 960px) {
     .card__wrap {
       -ms-flex-wrap: wrap;

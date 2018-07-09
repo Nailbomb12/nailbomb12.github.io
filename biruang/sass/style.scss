@@ -212,6 +212,7 @@ a {
 .card__wrap {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
   @media (max-width: 960px) {
     flex-wrap: wrap;
   }
