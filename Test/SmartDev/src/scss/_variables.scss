@@ -1,0 +1,8 @@
+
+@function rem($pxsize) {
+  @return ($pxsize/16)+rem;
+}
+
+$text: 'PT Sans Regular';
+$text_size: rem(24);
+$red: #ff621f;
