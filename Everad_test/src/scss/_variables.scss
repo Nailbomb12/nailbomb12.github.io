@@ -1,0 +1,12 @@
+
+@function rem($pxsize) {
+  @return ($pxsize/16)+rem;
+}
+
+$gold: #ffd50c;
+$header: 'Roboto Condensed';
+$text: 'PT Sans';
+$title: 'PT Sans Narrow';
+$red_color: #fc481a;
+$title_size: rem(48);
+$text_size: rem(17.01);
