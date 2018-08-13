@@ -6,16 +6,32 @@ var favfilmTxt = document.querySelector('.fav-filmtxt');
 var favSerialTxt = document.querySelector('.fav-serialtxt');
 var favorites = document.querySelector('.favorites');
 var idArr = [];
+var statuWindow = document.querySelector('.status-window');
+var statusWindowTxt = document.querySelector('.status-window__txt');
 
 ///add to favorites tab
 
-var addToFavorites = function addToFavorites(id, category) {
+
+var addToFavorites = function addToFavorites(id, category, name) {
     event.stopPropagation();
-    if (idArr.includes(id)) return;else {
+    if (idArr.includes(id)) {
+        statuWindow.innerHTML = '<p class = "status-window__txt--bold">\u0423\u0436\u0435 \u0432\u043E \u0432\u043A\u043B\u0430\u0434\u043A\u0435 \u0438\u0437\u0431\u0440\u0430\u043D\u043D\u043E\u0435</p>';
+        toFav(event.clientY, event.clientX);
+        return;
+    } else {
         idArr.push(id);
         getCurrentCard(id, category);
+        statuWindow.innerHTML = '<p class = "status-window__txt--bold">' + name + '</p><p class = "status-window__txt">\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043D\u043E \u0432 \u0438\u0437\u0431\u0440\u0430\u043D\u043D\u043E\u0435</p>';
+        toFav(event.clientY, event.clientX);
     }
 };
+function toFav(eventY, eventX) {
+    statuWindow.style.top = eventY + 40 + 'px';
+    statuWindow.style.left = eventX - 150 + 'px';
+    statuWindow.style.display = 'block';
+    setTimeout("statuWindow.style.display = 'none'", 1500);
+}
+
 // Метод для удаления элемента массива
 Array.prototype.remove = function (value) {
     var idx = this.indexOf(value);
@@ -30,6 +46,8 @@ var removeFromFavorites = function removeFromFavorites(id) {
         if (link.classList.contains('category-item--active') && link.hash === '#pane-3') {
             idArr.remove(id);
             event.currentTarget.parentNode.remove();
+            statuWindow.innerHTML = '<p class = "status-window__txt">\u0423\u0434\u0430\u043B\u0435\u043D\u043E \u0438\u0437 \u0438\u0437\u0431\u0440\u0430\u043D\u043D\u043E\u0433\u043E</p>';
+            toFav(event.clientY, event.clientX);
         }
     });
 };
@@ -353,6 +371,9 @@ var serials = document.querySelector('.tv-serials');
 var hiddenBlockIcon = document.querySelector('.hidden-search');
 var hiddenSearchBtn = document.querySelector('.hidden__form-send');
 var hiddenBlock = document.querySelector('.hidden');
+var favoritesFilms = document.querySelector('.favorites-films'); ///////////////////
+var favoritesSerials = document.querySelector('.favorites-serials'); //////////////
+
 
 tabLinks[0].classList.add('category-item--active');
 tabsPane[0].classList.add('tabs__pane--active');
@@ -405,13 +426,28 @@ var searchSwitcher = function searchSwitcher(value) {
     });
 };
 
+var placeholderSwitch = function placeholderSwitch(event) {
+
+    if (event.target == idInput || event.target == hiddenSearchId) {
+        idInput.placeholder = '';
+        hiddenSearchId.placeholder = '';
+    } else {
+        idInput.placeholder = 'Search';
+        hiddenSearchId.placeholder = 'Search';
+    };
+};
+
+document.addEventListener('click', placeholderSwitch);
+
 var mainSearch = function mainSearch(event) {
     event.preventDefault(0);
-    searchSwitcher(idInput.value);
-
     if (idInput.value === '') return;
+    searchSwitcher(idInput.value);
     idInput.value = '';
 };
+
+searchBtn.addEventListener('click', mainSearch);
+
 var mobileSearch = function mobileSearch(event) {
     event.preventDefault(0);
     searchSwitcher(hiddenSearchId.value);
@@ -421,7 +457,6 @@ var mobileSearch = function mobileSearch(event) {
     hiddenSearchId.value = '';
 };
 
-searchBtn.addEventListener('click', mainSearch);
 hiddenSearchBtn.addEventListener('click', mobileSearch);
 
 var switchTabs = function switchTabs(event) {
@@ -460,9 +495,11 @@ var switchTabs = function switchTabs(event) {
 
                     if (idArr.length !== 0) {
                         favfilmTxt.textContent = 'Фильмы';
+                        goldenStars(favoritesFilms);
                     }
                     if (idArr.length !== 0) {
                         favSerialTxt.textContent = 'Сериалы';
+                        goldenStars(favoritesSerials);
                     }
                     pageButtons.style.display = 'none';
                 };
@@ -484,6 +521,13 @@ var switchTabs = function switchTabs(event) {
     }
 };
 tabs.addEventListener('click', switchTabs);
+
+var goldenStars = function goldenStars(moviectegory) {
+    var goldenIcons = moviectegory.querySelectorAll('.icon');
+    goldenIcons.forEach(function (elem) {
+        elem.classList.add('gold-icon');
+    });
+};
 
 var switchAsideCategorys = function switchAsideCategorys(event) {
     event.preventDefault();
