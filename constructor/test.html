@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="theme-color" content="#000000">
+	<meta name="copyright" content="Author">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+	<meta name="apple-mobile-web-app-title" content="Application Name">
+	<meta name="msapplication-TileImage" content="images/favicons/144x144.png">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="format-detection" content="telephone=no">
+
+	
+	<title>House</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<main>
+        <div class="q">
+            <button class="edit">Edit</button>
+			<a href="index.html">to main</a>
+		</div>
+        <!-- <div class="main_wrap" id="savePage"  onclick="save(savePage)"> -->
+        <div class="main_wrap" id="savePage">
+            <script>
+                // let savePage = document.querySelector('#savePage');
+                savePage.innerHTML = localStorage.getItem('key');    
+            </script>
+		</div>
+
+
+
+
+
+
+
+
+
+		<div class="color-selector_wrap">
+			<div class="color__select-block garage__color-selector">
+				<ul class="color__list garage-color__list">
+					<li class="color__item garage-color__item">
+						<p class="color-current garage-color-current">default</p>
+						<a class="color__dropdown" href="#">Garage</a>
+						<ul class="color__sublist ">
+							<li><a href="#" class="color__sublist-link garage-color__sublist-link" data-img="garage_default" data-compon="garage">default</a></li>
+							<li><a href="#" class="color__sublist-link garage-color__sublist-link" data-img="garage_white" data-compon="garage">white</a></li>
+							<li><a href="#" class="color__sublist-link garage-color__sublist-link" data-img="garage_red" data-compon="garage">red</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="color__select-block roof__color-selector">
+				<ul class="color__list roof-color__list">
+					<li class="color__item roof-color__item">
+						<p class="color-current roof-color-current">default</p>
+						<a class="color__dropdown" href="#">Roof</a>
+						<ul class="color__sublist">
+							<li><a href="#" class="color__sublist-link roof-color__sublist-link" data-img="roof_default" data-compon="roof">default</a></li>
+							<li><a href="#" class="color__sublist-link roof-color__sublist-link" data-img="roof_white" data-compon="roof">white</a></li>
+							<li><a href="#" class="color__sublist-link roof-color__sublist-link" data-img="roof_red" data-compon="roof">red</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="color__select-block door__color-selector">
+				<ul class="color__list door-color__list">
+					<li class="color__item door-color__item">
+						<p class="color-current door-color-current">default</p>
+						<a class="color__dropdown" href="#">Door</a>
+						<ul class="color__sublist">
+							<li><a href="#" class="color__sublist-link door-color__sublist-link" data-img="door_default" data-compon="door">default</a></li>
+							<li><a href="#" class="color__sublist-link door-color__sublist-link" data-img="door_white" data-compon="door">white</a></li>
+							<li><a href="#" class="color__sublist-link door-color__sublist-link" data-img="door_red" data-compon="door">red</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</main>
+
+			<!-- <img class="main_img" src="img/main_bg1.png" usemap="#image-map"> -->
+			<!-- <map name="image-map" id="qweqwe">
+			    <area class="components" target="" alt="" title="Garage" href="#" coords="553,576,305,401" shape="rect">
+			    <area class="components" target="" alt="" title="Roof" href="#" coords="1068,374,1247,356,712,151,480,131,427,165,416,205,207,295,166,348" shape="poly">
+			    <area class="components" target="" alt="" title="Door" href="#" coords="716,553,636,388" shape="rect">
+			</map> -->
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="imageMapResizer.min.js"></script>
+	<script type="text/javascript">
+		imageMapResize();
+	</script>
+</body>
+</html>
