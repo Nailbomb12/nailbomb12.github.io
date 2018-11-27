@@ -1,0 +1,999 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+  display: block;
+}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+/* Responsive images and other embedded objects
+*/
+
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	 In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+
+/* force a vertical scrollbar to prevent a jumpy page */
+
+html {
+  overflow-y: scroll;
+}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+select,
+input,
+textarea {
+  font: 99% sans-serif;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+td,
+td img {
+  vertical-align: top;
+}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* standardize any monospaced elements */
+
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, sans-serif;
+}
+
+/* hand cursor on clickable elements */
+
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+/* make buttons play nice in IE */
+
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible;
+}
+
+/* scale images in IE7 more attractively */
+
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+
+/* let's clear some floats */
+
+.clearfix:before,
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/HelveticaNeue.woff") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.blue__btn {
+  background-color: #90d7d4;
+  border: 2px solid #90d7d4;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.input-element {
+  border: none;
+  background-color: #f6f6f6;
+  color: #aeaeae;
+}
+
+.add-to-list {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 33px;
+  background-color: #fcab74;
+  color: #fff;
+  font-size: 18px;
+  z-index: 3;
+}
+
+.add-to-list img {
+  float: left;
+  margin-right: 30px;
+  position: relative;
+  top: 10px;
+}
+
+.header {
+  font-size: 18px;
+}
+
+.header section {
+  border-top: 1px solid #f6f6f6;
+  position: relative;
+}
+
+.header section:first-child {
+  border-top: none;
+}
+
+.head-content {
+  max-width: 1160px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.header__top {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo__link {
+  display: block;
+  line-height: 0;
+}
+
+.top-nav-list li {
+  float: left;
+  margin-left: 30px;
+}
+
+.top-nav-list li:first-child {
+  margin-left: 0;
+}
+
+.top__nav-item {
+  display: inline-block;
+  padding: 15px 5px;
+  padding-bottom: 20px;
+  border-bottom: 8px solid #fff;
+}
+
+.top__nav-item--active {
+  border-bottom: 8px solid #90d7d4;
+}
+
+.header__middle {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__middle form {
+  position: relative;
+}
+
+.header__middle form::before {
+  content: url(../img/header/ic_search.svg);
+  display: block;
+  position: absolute;
+  top: 17px;
+  left: 23px;
+}
+
+.header-search {
+  padding: 15px 20px 15px 50px;
+  width: 385px;
+  border-radius: 50px;
+}
+
+.middle__nav-item {
+  display: inline-block;
+  padding: 4px 0;
+  margin-left: 28px;
+}
+
+.middle__nav-item:first-child {
+  margin-left: 0;
+}
+
+.middle__nav-item img {
+  display: inline-block;
+  margin-right: 14px;
+  width: 25px;
+  position: relative;
+  top: 5px;
+}
+
+#wishes img {
+  margin-right: 10px;
+  top: 3px;
+}
+
+.nav__list-item {
+  display: inline-block;
+  margin-right: 25px;
+  border-bottom: 8px solid #fff;
+}
+
+.nav__list-item:hover {
+  border-bottom: 8px solid #90d7d4;
+}
+
+.nav__list-item:hover .submenu {
+  display: block;
+}
+
+.nav__list-item:last-child {
+  margin-right: 0;
+}
+
+.nav__list-link {
+  display: inline-block;
+  padding-top: 28px;
+  padding-bottom: 20px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  background-color: #fff;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  border-top: 1px solid #f6f6f6;
+}
+
+.submenu-wrap {
+  max-width: 1160px;
+  margin: auto;
+  padding: 53px 10px;
+  display: flex;
+}
+
+.sub_left {
+  width: 26%;
+  margin-right: 75px;
+}
+
+.sub_left h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.sub_left p {
+  font-size: 15px;
+  color: #9f9f9f;
+}
+
+.sub_right li {
+  margin-bottom: 27px;
+  font-size: 20px;
+}
+
+.sub_right li:last-child {
+  margin-bottom: 0px;
+}
+
+.sub_right a:hover {
+  color: #90d7d4;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.swiper-slide {
+  position: relative;
+  line-height: 0;
+}
+
+.slide-content {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.slide-content img {
+  font-size: 0;
+  line-height: 0;
+}
+
+.slide-content h1 {
+  font-size: 72px;
+  margin-bottom: 30px;
+}
+
+.slide-content p {
+  font-size: 24px;
+}
+
+.main-next,
+.main-prev {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 44%;
+}
+
+.main-prev {
+  background-image: url(../img/left.svg);
+  left: 50px;
+}
+
+.main-next {
+  background-image: url(../img/Right.svg);
+  right: 50px;
+}
+
+main {
+  background-color: #f3f3f3;
+  padding: 50px 0 34px 0;
+}
+
+.main__title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 83px;
+}
+
+.card__section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 23%;
+  margin-bottom: 10px;
+}
+
+.card__img {
+  position: relative;
+  font-size: 0;
+}
+
+.card__hover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card__img:hover .card__hover {
+  display: block;
+  cursor: pointer;
+}
+
+.card__describe {
+  background-color: #fff;
+  padding: 29px 20px;
+  display: block;
+  font-size: 18px;
+  position: relative;
+}
+
+.card__describe .card_icon {
+  position: absolute;
+  bottom: 29px;
+  right: 20px;
+  display: block;
+  background-image: url(../img/gallery/Wish.svg);
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 24px;
+}
+
+.card__describe .card_icon--added {
+  background-image: url(../img/gallery/wish-active.svg);
+}
+
+.card_icon {
+  position: absolute;
+  bottom: 29px;
+  right: 20px;
+  display: block;
+  background-image: url(../img/gallery/Wish.svg);
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 24px;
+}
+
+.card_icon--added {
+  background-image: url(../img/gallery/wish-active.svg);
+}
+
+.card__btn {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  width: 75%;
+}
+
+.card__btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 2px solid #fff;
+}
+
+.product__name {
+  font-size: 20px;
+  margin-bottom: 13px;
+}
+
+.new_price {
+  color: #90d7d4;
+  margin-right: 4px;
+}
+
+.old__price {
+  text-decoration: line-through;
+}
+
+.footer__top {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__clogo {
+  margin-bottom: 43px;
+}
+
+.footer__navigation {
+  display: flex;
+  margin-bottom: 55px;
+}
+
+.footer__navigation li {
+  margin-right: 23px;
+}
+
+.social_list {
+  display: flex;
+}
+
+.social_list li {
+  margin-right: 20px;
+}
+
+.social__link:hover {
+  opacity: .8;
+}
+
+.footer__top-right {
+  width: 35%;
+}
+
+.footer__top-right h3 {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 32px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.footer__form {
+  position: relative;
+}
+
+.email-inp {
+  padding: 23px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.footer_btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.footer__bottom {
+  font-size: 16px;
+  border-top: 1px solid #eee;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  padding: 33px 0 45px 0;
+  opacity: .4;
+}
+
+.footer__bottom ul {
+  display: flex;
+}
+
+.footer__bottom ul li {
+  margin-right: 33px;
+}
+
+.footer__bottom p {
+  font-size: 11px;
+}
+
+.footer__bottom p a {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card_templ {
+  display: flex;
+}
+
+.card-slider {
+  width: 52%;
+}
+
+.card-slider .card-button-next,
+.card-slider .card-button-prev {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 45%;
+}
+
+.card-slider .card-button-next {
+  left: 25px;
+}
+
+.card-slider .card-button-prev {
+  right: 25px;
+}
+
+.card-description {
+  width: 48%;
+  background-color: #fff;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-description .title {
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.card-description .tag {
+  color: #a1a1a1;
+  margin-bottom: 25px;
+}
+
+.card-description .card-new-price,
+.card-description .card-old-price {
+  font-size: 25px;
+}
+
+.card-description .card-old-price {
+  text-decoration: line-through;
+  margin-left: 20px;
+}
+
+.card-description .card-content {
+  padding: 0;
+  margin-bottom: 80px;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.card-description .card-content .card-content-title {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.card-description .card-content .card-text {
+  margin-bottom: 20px;
+}
+
+.card-description .card-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-description .card-btns form {
+  width: 43%;
+}
+
+.card-description .card-btns form select {
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.card-description .card-btns .add-btn {
+  width: 43%;
+  padding: 13px 20px;
+}
+
+.card-description .card-btns .add-btn:hover {
+  color: #90d7d4;
+  background-color: #fff;
+}
+
+.card-description .card-btns .card_icon {
+  position: relative;
+  top: 12px;
+  right: 0;
+}
+
+.card-description .card-btns .sublist {
+  display: none;
+  position: absolute;
+}
+
+.bag-block {
+  padding: 50px;
+  background-color: #fff;
+}
+
+.bag-block .bag-title {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.bag-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #aeaeae;
+}
+
+.bag-item .left {
+  width: 35%;
+}
+
+.bag-item .left .card-img {
+  float: left;
+  margin-right: 30px;
+}
+
+.bag-item .left .title {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.bag-item .left .tag {
+  color: #aeaeae;
+}
+
+.bag-item .right {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.total-card-prise {
+  font-size: 25px;
+}
+
+.bottom {
+  padding-top: 30px;
+}
+
+.bottom .total-block {
+  width: 45%;
+  margin-left: auto;
+}
+
+.bottom .total-block .total-price {
+  margin-bottom: 20px;
+}
+
+.bottom .total-block p {
+  margin-bottom: 15px;
+  color: #aeaeae;
+}
+
+.bottom .total-block form {
+  float: right;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'HelveticaNeue', sans-serif;
+  color: #383838;
+  font-size: 18px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: auto;
+  min-width: 320px;
+  position: relative;
+}
+
+.content {
+  max-width: 1160px;
+  margin: auto;
+  padding: 0 10px;
+}
