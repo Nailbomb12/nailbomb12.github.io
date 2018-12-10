@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="theme-color" content="#000000">
+  <meta name="copyright" content="Author">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+  <meta name="apple-mobile-web-app-title" content="Application Name">
+  <meta name="msapplication-TileImage" content="images/favicons/144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="img/logo_icon.png" type="images/x-icon">
+  <title>My Account - Living Gems</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top header_top-user">
+            <div class="container">
+                <div class="top__nav">
+                    <!-- <a href="my-design.html" class="top__nav-title">My Designs</a> -->
+                    <ul class="user user_in">
+                        <li>
+                            <a href="#" class="user_in_link">
+                                <img src="img/header/user@2x.svg" alt="" class="user__icon">
+                                <span class="user__name" id="userName">My Account</span>
+                            </a>
+                            <ul class="user__sublist">
+                                <li><a href="edit.html">Edit Info</a></li>
+                                <li><a href="index.html">Sign Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <div class="header__main">
+            <div class="container">
+                <div class="header__main-wrap">
+                    <a href="#" class="back__link" onclick="history.go(-1); return false;"><img src="img/header/back.svg" alt="Back"><span>Back</span></a>
+                    <div class="logo_wrap">
+                        <a href="index.html" class="logo__link"><img src="img/Logo2x.png" alt="Living Gems"></a>
+                    </div>
+                    <p class="header__main-nav">Edit Info</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="sign-in__wrap">
+            <div class="sign__conteiner">
+                <form action="#" class="sign__form">
+                    <input type="text" placeholder="steve@gmail.com">
+                    <input type="text" placeholder="0400 555 888">
+                    <input type="password" placeholder="Current Password">
+                    <input type="password" placeholder="New Password">
+                    <input type="password" placeholder="Repeat New Password">
+                    <input type="submit" class="pink__btn sign__btn" value="Save">
+                </form>
+                <div class="sign_text">
+                    <p>Already have an account? <a href="#" class="sign__link">Sign In</a></p>
+                </div>  
+            </div>
+        </div>
+    </div>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
