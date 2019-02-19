@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -7,336 +8,377 @@
 	<script type="text/javascript" src="js/move-top.js"></script>
 	<script type="text/javascript" src="js/easing.js"></script>
 	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
 				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
 			});
 		});
 	</script>
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
+	 rel='stylesheet' type='text/css'>
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<link rel="icon" href="images/qwe.jpg" type="images/x-icon">
 	<title>Portfolio</title>
 </head>
+
 <body>
 
-<header class="banner" id="home">
-	<div class="container"> 
-		<div class="top-header row">
-			<script src="js/classie.js"></script>
-			<!--top-nav-->
-			<div class="top-nav">
-				<div class="nav-icon">
-					<a href="#" class="right_bt" id="activator"><span> </span> </a>
-				</div>
-				<div class="box" id="box">
-					<div class="box_content">
-						<div class="box_content_center">
-							<div class="form_content">
-								<div class="menu_box_list">
-									<ul>
-										<li><a class="scroll" href="#about"><span>about</span></a></li>
-										<li><a class="scroll" href="#skil"><span>skills</span></a></li>
-										<li><a class="scroll" href="#portfolio"><span>portfolio</span></a></li>
-										<li><a class="scroll" href="#contact"><span>Contact</span></a></li>
-										<div class="clearfix"> </div>
-									</ul>
+	<header class="banner" id="home">
+		<div class="container">
+			<div class="top-header row">
+				<script src="js/classie.js"></script>
+				<!--top-nav-->
+				<div class="top-nav">
+					<div class="nav-icon">
+						<a href="#" class="right_bt" id="activator"><span> </span> </a>
+					</div>
+					<div class="box" id="box">
+						<div class="box_content">
+							<div class="box_content_center">
+								<div class="form_content">
+									<div class="menu_box_list">
+										<ul>
+											<li><a class="scroll" href="#about"><span>about</span></a></li>
+											<li><a class="scroll" href="#skil"><span>skills</span></a></li>
+											<li><a class="scroll" href="#portfolio"><span>portfolio</span></a></li>
+											<li><a class="scroll" href="#contact"><span>Contact</span></a></li>
+											<div class="clearfix"> </div>
+										</ul>
+									</div>
+									<a class="boxclose" id="boxclose"> <span> </span></a>
 								</div>
-								<a class="boxclose" id="boxclose"> <span> </span></a>
-							</div>                                  
-						</div> 	
-					</div> 
-				</div>       	  
-			</div>
-		
-			<script type="text/javascript">
-				var $ = jQuery.noConflict();
-					$(function() {
-						$('#activator').click(function(){
-							$('#box').animate({'top':'0px'},500);
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<script type="text/javascript">
+					var $ = jQuery.noConflict();
+					$(function () {
+						$('#activator').click(function () {
+							$('#box').animate({
+								'top': '0px'
+							}, 500);
 						});
-						$('#boxclose').click(function(){
-						$('#box').animate({'top':'-1000px'},500);
+						$('#boxclose').click(function () {
+							$('#box').animate({
+								'top': '-1000px'
+							}, 500);
 						});
 					});
-					$(document).ready(function(){
-					$(".toggle_container").hide(); 
-					$(".trigger").click(function(){
-						$(this).toggleClass("active").next().slideToggle("slow");
+					$(document).ready(function () {
+						$(".toggle_container").hide();
+						$(".trigger").click(function () {
+							$(this).toggleClass("active").next().slideToggle("slow");
 							return false;
+						});
+
 					});
-										
-				});
-			</script>
-			
-			<div class="clearfix"> </div>
-		</div>
-		<div class="banner-info">
-			<div class="banner-left">
-				<img src="images/f1.png" alt="" class="banner-left-photo"/>
-			</div>
-			<div class="banner-right">
-				<h1>VITALII IVANIUK</h1>
-				<div class="border"></div>
-				<h2>Junior Front - End Developer</h2>
-				<a href="https://drive.google.com/uc?export=download&id=11TRyA29l7R_BgsfWsUZRzeMYVLYuYJJB">DOWNLOAD CV</a>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</header>
-
-<section class="about text-center" id="about">
-	<div class="container">
-		<h3>ABOUT ME</h3>
-		<div class="strip text-center"><img src="images/about.png" alt=""/></div>
-		<p>During the last 7 years I had been working in the field of transport logistics. Why logistics? It was simply a coincidence. Throughout my career, I grew up from an ordinary manager to a head of the department. However I came to the conclusion that I wasn't interested in further career in logistics so I had decided to change my qualification.</p>
-		<p>One of the things that exposed me to learning IT was my love to science fiction and computer games. So i decided to quit my job and started learning Front-End. At the moment I learned technologies such as HTML, CSS, JavaScript. Extremely motivated to succeed in this field.</p>
-		<p>You can check up my Pet-projects in the portfolio section or <a href="https://github.com/Nailbomb12">GitHub page</a></p>
-	</div>
-</section>
-
-<div class="about-back"></div>
-
-<section class="my-skills text-center" id="skil">
-	<div class="container">
-		<h3>TECHNICAL SKILLS</h3>
-		<div class="strip text-center"><img src="images/skill.png" alt=" "/></div>
-		<div class="skill-grids">
-					<div class="skills-grid text-center">
-						<div class="circle" id="circles-1"></div>
-						<p>HTML5 / CSS3</p>
-					</div>
-					<div class="skills-grid text-center">
-						<div class="circle" id="circles-2"></div>
-						<p>SASS / SCSS</p>
-					</div>
-					<div class="skills-grid text-center">
-						<div class="circle" id="circles-3"></div>
-						<p>Gulp</p>
-					</div>
-					<div class="skills-grid text-center">
-						<div class="circle" id="circles-6"></div>
-						<p>Java Script</p>
-					</div>
-					<div class="skills-grid text-center">
-						<div class="circle" id="circles-4"></div>
-						<p>Git</p>
-					</div>
-					<div class="skills-grid text-center">
-						<div class="circle" id="circles-5"></div>
-						<p>Adobe Photoshop</p>
-					</div>
-					<div class="skills-grid text-center">
-						<div class="circle" id="circles-7"></div>
-						<p>Bootstrap</p>
-					</div>
-					<div class="skills-grid text-center">
-						<div class="circle" id="circles-8"></div>
-						<p>BEM</p>
-					</div>
-					<div class="skills-grid text-center">
-						<div class="circle" id="circles-9"></div>
-						<p>Bitrix</p>
-					</div>
-					<div class="clearfix"> </div>
-				 <script type="text/javascript" src="js/circles.js"></script>
-					         <script>
-								// var colors = ['#6ed4c0', '#ffffff'];
-								for (var i = 1; i <= 10; i++) {
-									var child = document.getElementById('circles-' + i),
-										// percentage = 30 + (i * 7);
-										percentage = [70, 55, 60, 60, 45, 40, 30, 80, 80]
-									Circles.create({
-										id:         child.id,
-										percentage: percentage[i - 1],
-										radius:     60,
-										width:      10,
-										number:   	percentage / 1,
-										text:       '%',
-										colors:     ['#6ed4c0', '#ffffff']
-									});
-								}
-						
 				</script>
-		</div>
-	</div>	
-</section>
-<div class="my-skill-back"></div>
 
-<section class="education text-center">
-	<div class="container">
-		<div class="edu-info">
-			<h3>EDUCATION</h3>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="banner-info">
+				<div class="banner-left">
+					<img src="images/f1.png" alt="" class="banner-left-photo" />
+				</div>
+				<div class="banner-right">
+					<h1>VITALII IVANIUK</h1>
+					<div class="border"></div>
+					<h2>Junior Front - End Developer</h2>
+					<a href="https://drive.google.com/open?id=1Wbzpa_CkjD3YqwcsrQtmvAvmO7Ohz7IV" target="_blank">DOWNLOAD CV</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
 		</div>
-		<div class="strip text-center"><img src="images/edu.png" alt=" "/></div>
-		<div class="edu-grids">
-			<div class="col-sm-4 col-md-4 edu-grid">
-				<p>2006 - 2010</p><span>Graduated</span>
-				<div class="edu-border">
-					<div class="edu-grid-master">
-						<img src="images/arrow.png" alt=""/>
-						<h3>Accounting and Auditing</h3>
-						<h4>Donbass Technical<br> University</h4>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-4 col-md-4 edu-grid">
-				<p>2010 - 2011</p><span>Graduated</span>
-				<div class="edu-border">
-					<div class="edu-grid-master">
-						<img src="images/arrow.png" alt=""/>
-						<h3>Finance</h3>
-						<h4>Kharkov Institute Of<br> Management</h4>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-4 col-md-4 edu-grid">
-				<p>2018</p><span>Graduated</span>
-				<div class="edu-border">
-					<div class="edu-grid-master">
-						<img src="images/arrow.png" alt=""/>
-						<h3>Front End Development</h3>
-						<h4><br>GoIt</h4>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
+	</header>
+
+	<section class="about text-center" id="about">
+		<div class="container">
+			<h3>ABOUT ME</h3>
+			<div class="strip text-center"><img src="images/about.png" alt="" /></div>
+			<p>During the last 7 years I had been working in the field of transport logistics. Why logistics? It was simply a
+				coincidence. Throughout my career, I grew up from an ordinary manager to a head of the department. However I came
+				to the conclusion that I wasn't interested in further career in logistics so I had decided to change my
+				qualification.</p>
+			<p>One of the things that exposed me to learning IT was my love to science fiction and computer games. So i decided
+				to quit my job and started learning Front-End. At the moment I learned technologies such as HTML, CSS, JavaScript.
+				Extremely motivated to succeed in this field.</p>
+			<p>You can check up my Pet-projects in the portfolio section or <a href="https://github.com/Nailbomb12">GitHub page</a></p>
 		</div>
+	</section>
+
+	<div class="about-back"></div>
+
+	<section class="my-skills text-center" id="skil">
+		<div class="container">
+			<h3>TECHNICAL SKILLS</h3>
+			<div class="strip text-center"><img src="images/skill.png" alt=" " /></div>
+			<div class="skill-grids">
+				<div class="skills-grid text-center">
+					<div class="circle" id="circles-1"></div>
+					<p>HTML5 / CSS3</p>
+				</div>
+				<div class="skills-grid text-center">
+					<div class="circle" id="circles-2"></div>
+					<p>SASS / SCSS</p>
+				</div>
+				<div class="skills-grid text-center">
+					<div class="circle" id="circles-3"></div>
+					<p>Gulp</p>
+				</div>
+				<div class="skills-grid text-center">
+					<div class="circle" id="circles-6"></div>
+					<p>Java Script / jQuery</p>
+				</div>
+				<div class="skills-grid text-center">
+					<div class="circle" id="circles-4"></div>
+					<p>Git</p>
+				</div>
+				<div class="skills-grid text-center">
+					<div class="circle" id="circles-5"></div>
+					<p>Adobe Photoshop</p>
+				</div>
+				<div class="skills-grid text-center">
+					<div class="circle" id="circles-7"></div>
+					<p>Bootstrap</p>
+				</div>
+				<div class="skills-grid text-center">
+					<div class="circle" id="circles-8"></div>
+					<p>BEM</p>
+				</div>
+				<div class="skills-grid text-center">
+					<div class="circle" id="circles-9"></div>
+					<p>Wordpress</p>
+				</div>
+				<div class="clearfix"> </div>
+				<script type="text/javascript" src="js/circles.js"></script>
+				<script>
+					// var colors = ['#6ed4c0', '#ffffff'];
+					for (var i = 1; i <= 10; i++) {
+						var child = document.getElementById('circles-' + i),
+							// percentage = 30 + (i * 7);
+							percentage = [70, 55, 60, 60, 45, 40, 30, 80, 40]
+						Circles.create({
+							id: child.id,
+							percentage: percentage[i - 1],
+							radius: 60,
+							width: 10,
+							number: percentage / 1,
+							text: '%',
+							colors: ['#6ed4c0', '#ffffff']
+						});
+					}
+				</script>
+			</div>
+		</div>
+	</section>
+	<div class="my-skill-back"></div>
+
+	<section class="education text-center">
+		<div class="container">
+			<div class="edu-info">
+				<h3>EDUCATION</h3>
+			</div>
+			<div class="strip text-center"><img src="images/edu.png" alt=" " /></div>
+			<div class="edu-grids">
+				<div class="col-sm-4 col-md-4 edu-grid">
+					<p>2006 - 2010</p><span>Graduated</span>
+					<div class="edu-border">
+						<div class="edu-grid-master">
+							<img src="images/arrow.png" alt="" />
+							<h3>Accounting and Auditing</h3>
+							<h4>Donbass Technical<br> University</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-4 edu-grid">
+					<p>2010 - 2011</p><span>Graduated</span>
+					<div class="edu-border">
+						<div class="edu-grid-master">
+							<img src="images/arrow.png" alt="" />
+							<h3>Finance</h3>
+							<h4>Kharkov Institute Of<br> Management</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-4 edu-grid">
+					<p>2018</p><span>Graduated</span>
+					<div class="edu-border">
+						<div class="edu-grid-master">
+							<img src="images/arrow.png" alt="" />
+							<h3>Front End Development</h3>
+							<h4><br>GoIt</h4>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+	</section>
+	<div class="strip-border">
+		<p></p>
 	</div>
-	
-</section>
-<div class="strip-border"><p></p></div>
 
-<section class="work-experience text-center">
-	<div class="container">
-		<div class="work-info">
-			<h3>WORK EXPERIENCE</h3>
-		</div>
-		<div class="strip text-center"><img src="images/work.png" alt=" "/></div>
-		<div class="work-grids">
-			<div class="col-12 col-sm-6 col-md-6 w-grid">
-				<div class="work-grid">
-					<h3>2015 - 2016</h3>
-					<div class="work-grid-info">
-						<h4>Neolit LLC</h4>
-						<h5>Head of logistics department</h5>
-						<p>Expansion of the customer base;<br>
+	<section class="work-experience text-center">
+		<div class="container">
+			<div class="work-info">
+				<h3>WORK EXPERIENCE</h3>
+			</div>
+			<div class="strip text-center"><img src="images/work.png" alt=" " /></div>
+			<div class="work-grids">
+				<div class="col-12 col-sm-3 col-md-6 w-grid">
+					<div class="work-grid">
+						<h3>August 2018 - Now</h3>
+						<div class="work-grid-info">
+							<h4>Softevol</h4>
+							<h5>Junior Front - End Developer</h5>
+							<p>Development responsive and cross-browser web-pages. Pixel Perfect markup;<br>
+								Tested in old (w3m, lynx, IE6 - 11) and most popular browsers;<br>
+								Development and support sites on WordpressCRM platform;<br>
+								Collaborate with other team members;<br></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-3 col-md-6 w-grid">
+					<div class="work-grid">
+						<h3>2015 - 2016</h3>
+						<div class="work-grid-info">
+							<h4>Neolit LLC</h4>
+							<h5>Head of logistics department</h5>
+							<p>Expansion of the customer base;<br>
 								Searching and involving new clients<br>
 								Work with existing clients<br>
 								Implementation of the sales plan;<br>
 								Staff management<br></p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-6 w-grid">
-				<div class="work-grid">
-					<h3>2010 - 2015</h3>
-					<div class="work-grid-info">
-						<h4>Hlebodar Company</h4>
-						<h5>Logistics Manager</h5>
-						<p>Organization of automobile,<br> sea and multimodal transportations;<br>
+				<!-- <div class="col-12 col-sm-3 col-md-6 w-grid">
+					<div class="work-grid">
+						<h3>2010 - 2015</h3>
+						<div class="work-grid-info">
+							<h4>Hlebodar Company</h4>
+							<h5>Logistics Manager</h5>
+							<p>Organization of automobile,<br> sea and multimodal transportations;<br>
 								Drawing up optimal transport routes;<br>
 								Keeping up with delivery schedules;<br>
 								Sub leader;</p>
+						</div>
 					</div>
-				</div>
+				</div> -->
+				<div class="clearfix"></div>
 			</div>
-			<div class="clearfix"></div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<section class="gallery-section text-center" id="portfolio">
-	<div class="container">
-		<h3>PORTFOLIO</h3>
-		<div class="strip text-center"><img src="images/port.png" alt=" "/></div>
-		<p>All projects were created with HTML5, CSS3, SASS and all of them are completely adaptive. Some of them were created with Java Script, Lodash, Gulp. Click "VIEW" to check it up.</p>
-		<div class="gallery-grids">
-			<div class="top-gallery">
-				<div class="col-12 col-sm-6 col-md-4 gallery-grid gallery1">
-					<img src="images/p1.png" class="img-responsive" alt="/">
-					<div class="textbox">
-						<h4>KinoFan</h4>
-						<a class="button" href="https://nailbomb12.github.io/KinoFan/build/index.html" target="_blank">VIEW</a>
+	<section class="gallery-section text-center" id="portfolio">
+		<div class="container">
+			<h3>PORTFOLIO</h3>
+			<div class="strip text-center"><img src="images/port.png" alt=" " /></div>
+			<p>I have at least 5 commercial projects. But unfortunately most of it are still in progress because of back end. So there is some examples I might to show you. All projects were created with HTML5, CSS3, SASS and all of them are completely adaptive. Some of them were
+				created with Java Script, Lodash, Gulp. Click "VIEW" to check it up.</p>
+			<div class="gallery-grids">
+				<div class="top-gallery">
+					<div class="col-12 col-sm-6 col-md-4 gallery-grid gallery1">
+						<!-- <img src="images/p8.png" class="img-responsive" alt="/"> -->
+						<div class="textbox">
+							<h4>Atiim</h4>
+							<a class="button" href="https://www.atiim.com" target="_blank">VIEW</a>
+						</div>
 					</div>
-				</div>
-				<div class="col-12 col-sm-6 col-md-4 gallery-grid gallery1">
-					<img src="images/p7.jpg" class="img-responsive" alt="/">
-					<div class="textbox">
-						<h4>PantoMax</h4>
-						<a class="button" href="https://nailbomb12.github.io/Everad_test/build/index.html" target="_blank">VIEW</a>
+
+
+					<div class="col-12 col-sm-6 col-md-4 gallery-grid gallery1">
+						<!-- <img src="images/p2.jpg" class="img-responsive" alt="/"> -->
+						<div class="textbox">
+							<h4>GoIt</h4>
+							<a class="button" href="https://nailbomb12.github.io/GoIt/build/index.html" target="_blank">VIEW</a>
+						</div>
 					</div>
-				</div>
-				<div class="col-12 col-sm-6 col-md-4 gallery-grid gallery1">
-					<img src="images/p2.jpg" class="img-responsive" alt="/">
-					<div class="textbox">
-						<h4>GoIt</h4>
-						<a class="button" href="https://nailbomb12.github.io/GoIt/build/index.html" target="_blank">VIEW</a>
+					<div class="col-12 col-sm-6 col-md-4 gallery-grid gallery1">
+						<!-- <img src="images/p8.png" class="img-responsive" alt="/"> -->
+						<div class="textbox">
+							<h4>Living Gems</h4>
+							<a class="button" href="https://nailbomb12.github.io/living_gems-master/build/index.html" target="_blank">VIEW</a>
+						</div>
 					</div>
-				</div>
-				<div class="col-12 col-sm-6 col-md-4 gallery-grid gallery1">
-					<img src="images/p3.jpg" class="img-responsive" alt="/">
+					<div class="col-12 col-sm-6 col-md-4 gallery-grid gallery1">
+						<!-- <img src="images/p1.png" class="img-responsive" alt="/"> -->
+						<div class="textbox">
+							<h4>KinoFan</h4>
+							<a class="button" href="https://nailbomb12.github.io/KinoFan/build/index.html" target="_blank">VIEW</a>
+						</div>
+					</div>
+					
+					
+					
+					<div class="col-12 col-sm-6 col-md-4 gallery-grid gallery1">
+						<!-- <img src="images/p3.jpg" class="img-responsive" alt="/"> -->
 						<div class="textbox">
 							<h4>Autoshop</h4>
 							<a class="button" href="https://nailbomb12.github.io/AUTOSHOP/index.html" target="_blank">VIEW</a>
 						</div>
-				</div>
-				<div class="col-12 col-sm-6 col-md-4 gallery-grid gallery1">
-					<img src="images/p5.jpg" class="img-responsive" alt="/">
-					<div class="textbox">
-						<h4>Buzinger</h4>
-						<a class="button" href="https://nailbomb12.github.io/bazinger/index.html" 
-						target="_blank">VIEW</a>
 					</div>
-				</div>
-				<div class="col-12 col-sm-6 col-md-4 gallery-grid gallery1">
-					<img src="images/p4.jpg" class="img-responsive" alt="/">
-					<div class="textbox">
-						<h4>Biruang</h4>
-						<a class="button" href="https://nailbomb12.github.io/biruang/index.html" target="_blank">VIEW</a>
+					<div class="col-12 col-sm-6 col-md-4 gallery-grid gallery1">
+						<!-- <img src="images/p5.jpg" class="img-responsive" alt="/"> -->
+						<div class="textbox">
+							<h4>Buzinger</h4>
+							<a class="button" href="https://nailbomb12.github.io/bazinger/index.html" target="_blank">VIEW</a>
+						</div>
 					</div>
+					<!-- <div class="col-12 col-sm-6 col-md-4 gallery-grid gallery1">
+						<img src="images/p4.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Biruang</h4>
+							<a class="button" href="https://nailbomb12.github.io/biruang/index.html" target="_blank">VIEW</a>
+						</div>
+					</div> -->
+					<div class="clearfix"> </div>
 				</div>
-				<div class="clearfix"> </div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<section class="contact" id="contact">
-	<div class="container">
-		<div class="contact-info text-center">
-			<h3>CONTACT</h3>
-			<div class="strip text-center"><img src="images/con1.png" alt=" "/></div>
-		</div>
-		<div class="contact-grids">
-			<div class="col-12 contact-left">
-				<ul>
-					<li class="place contact-item">Ukraine, Kyiv </li>
-					<li class="lk contact-item"><a href="https://www.linkedin.com/in/vitalii-ivaniuk-aba698162/" class="contact-link" target="_blank">LinkedIn</a></li>
-					<li><a href="" class="contact-link"></a></li>
-					<li><a href="mailto:info@example.com">v.ivaniuk87@gmail.com</a></li>
-					<li>+38 (066) 773-03-74</li>
-				</ul>
+	<section class="contact" id="contact">
+		<div class="container">
+			<div class="contact-info text-center">
+				<h3>CONTACT</h3>
+				<div class="strip text-center"><img src="images/con1.png" alt=" " /></div>
 			</div>
-			<div class="clearfix"></div>
+			<div class="contact-grids">
+				<div class="col-12 contact-left">
+					<ul>
+						<li class="place contact-item">Ukraine, Kyiv </li>
+						<li class="lk contact-item"><a href="https://www.linkedin.com/in/vitalii-ivaniuk-aba698162/" class="contact-link"
+							 target="_blank">LinkedIn</a></li>
+						<li><a href="" class="contact-link"></a></li>
+						<li><a href="mailto:info@example.com">v.ivaniuk87@gmail.com</a></li>
+						<li>+38 (066) 773-03-74</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
 		</div>
-	</div>
-</section>
-<div class="footer-top"></div>
+	</section>
+	<div class="footer-top"></div>
 
-<section class="resume text-center">
-	<div class="container">
-		<div class="strip text-center"><img src="images/down.png" alt=""/></div>
-		<div class="down"><a href="https://drive.google.com/uc?export=download&id=11TRyA29l7R_BgsfWsUZRzeMYVLYuYJJB">Download My Resume</a></div>
-	</div>
-</section>
+	<section class="resume text-center">
+		<div class="container">
+			<div class="strip text-center"><img src="images/down.png" alt="" /></div>
+			<div class="down"><a href="https://drive.google.com/open?id=1Wbzpa_CkjD3YqwcsrQtmvAvmO7Ohz7IV" target="_blank">Download
+					My Resume</a></div>
+		</div>
+	</section>
 
 	<script type="text/javascript">
-		$(document).ready(function() {
+		$(document).ready(function () {
 			/*
 				var defaults = {
 				containerID: 'toTop', // fading element id
@@ -345,10 +387,13 @@
 				easingType: 'linear' 
 				};
 			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
 			});
+
+		});
 	</script>
 </body>
+
 </html>

@@ -386,7 +386,33 @@ background: url(../images/port-back.jpg) no-repeat 0px 0px;
   padding: 0;
 }
 .gallery1 {
-position:relative;
+	position:relative;
+	width: 33.33%;
+	height: 330px;
+	background-size: cover;
+	background-position: center;
+	background-color: #fff;
+}
+.gallery1:nth-child(1){
+	background-image: url(../images/Atiim_Alignment-Chart1.png);
+}
+.gallery1:nth-child(2){
+	background-image: url(../images/p2.jpg);
+}
+.gallery1:nth-child(3){
+	background-image: url(../images/p8.jpg);
+}
+.gallery1:nth-child(3){
+	/* background-image: url(../images/p2.jpg); */
+}
+.gallery1:nth-child(4){
+	background-image: url(../images/p1.png);
+}
+.gallery1:nth-child(5){
+	background-image: url(../images/p3.jpg);
+}
+.gallery1:nth-child(6){
+	background-image: url(../images/p5.jpg);
 }
 .gallery1 .textbox {
 width: 90%;
@@ -635,7 +661,7 @@ border:none;
 	  min-height: 167px;
 	}
 	.gallery-section {
-	  min-height: 1319px;
+	  min-height: 1143px;
 	  padding: 115px 0 0px 0;
 	}
 	.my-skill-back {
