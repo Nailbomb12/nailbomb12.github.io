@@ -364,7 +364,7 @@ background: url(../images/port-back.jpg) no-repeat 0px 0px;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	text-align: center;
-	min-height:1404px;
+	/* min-height:1404px; */
     padding: 140px 0 0px 0;
 }
 #portfolio p {
