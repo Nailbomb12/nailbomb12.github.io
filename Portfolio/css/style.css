@@ -400,16 +400,13 @@ background: url(../images/port-back.jpg) no-repeat 0px 0px;
 	background-image: url(../images/p2.jpg);
 }
 .gallery1:nth-child(3){
-	background-image: url(../images/p8.jpg);
-}
-.gallery1:nth-child(3){
-	/* background-image: url(../images/p2.jpg); */
+	background-image: url(../images/p3.jpg);
 }
 .gallery1:nth-child(4){
 	background-image: url(../images/p1.png);
 }
 .gallery1:nth-child(5){
-	background-image: url(../images/p3.jpg);
+	background-image: url(../images/p4.jpg);
 }
 .gallery1:nth-child(6){
 	background-image: url(../images/p5.jpg);
