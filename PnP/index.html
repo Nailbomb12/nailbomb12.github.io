@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pin Up Test</title>
+  <link rel="stylesheet" href="css/style.min.css?_v=20220722012255" />
+</head>
+
+  <body>
+    <main class="main">
+      <div class="main__container">
+        <header class="header">
+          <a href="/" class="header__logo">
+            <img src="img/logo.svg" alt="Pin Up" />
+          </a>
+        </header>
+        <div class="main__content">
+          <div class="main__bonus">
+            <h2 class="main__bonus-title main__bonus-item">
+              БОНУС до <span class="bold-text">30 000 ₴</span>
+            </h2>
+            <h3 class="main__bonus-subtitle main__bonus-item">
+              ФРІБЕТ до
+              <span class="bold-text">3 000 ₴</span>
+            </h3>
+          </div>
+          <div class="main__buttons">
+            <button class="main__button button" id="reg">отримати бонус</button>
+
+            <a href="#" class="main__buttons-link">бонусні умови</a>
+          </div>
+
+          <ul class="main__list">
+            <li class="main__list-item">
+              Високі <br />
+              коефіцієнти
+            </li>
+            <li class="main__list-item">
+              Максимально <br />
+              розписані лінії
+            </li>
+            <li class="main__list-item">
+              Швидкі <br />
+              виплати
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main__player" id="player"></div>
+    </main>
+    <div class="popup" id="popup">
+  <div
+    class="popup-container popup--reg"
+    id="popup--registration"
+    aria-haspopup="true"
+  >
+    <header class="popup__header">
+      <div class="popup__header-close" id="close_popup"></div>
+      <h2 class="popup__header-text popup__header--reg">Реєстрація</h2>
+    </header>
+
+    <div class="popup-reg">
+      <form class="popup-reg__form">
+        <p class="input-phone__title">Введіть номер свого телефону</p>
+        <div class="input-field text-field text-field_floating-2">
+          <input
+            class="input-phone text-field__input"
+            type="tel"
+            id="phone"
+            name="phone"
+            value="+3"
+          />
+          <label class="input-label text-field__label" for="phone"
+            >Номер телефону</label
+          >
+        </div>
+        <button class="popup-reg__form-button button" id="@@id">забрати бонус</button>
+
+      </form>
+      <ul class="popup-checklist">
+        <li class="popup-checklist__item">
+          <input
+            class="popup-checklist__checkbox"
+            type="checkbox"
+            checked=""
+            required=""
+          />
+          <label class="popup-checklist__text" for="popup-registration-rules">
+            Я погоджуюсь з
+            <a class="popup__link" href="#">правилами та умовами</a>
+          </label>
+        </li>
+        <li class="popup-checklist__item">
+          <input class="popup-checklist__checkbox" checked="" type="checkbox" />
+          <label class="popup-checklist__text" for="popup_reg_confirmsend"
+            >Отримувати розсилку про акції на e-mail та SMS</label
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+    <script src="js/app.min.js?_v=20220722012255"></script>
+  </body>
+</html>

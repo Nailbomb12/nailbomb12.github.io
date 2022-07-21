@@ -63,24 +63,24 @@
     top: 14px;
 }
 .links {
-        position: absolute;
-        display: block;
-        top: 40px;
-        right: 0;
-        left: 0;
-        margin-top: 22px;
-        background-color: rgba(0, 0, 0, 0.9);
-        overflow: hidden;
-        opacity: 0;
-        transition: 1s;
-        z-index: -2;
+    position: absolute;
+    display: block;
+    top: 40px;
+    right: 0;
+    left: 0;
+    margin-top: 22px;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    opacity: 0;
+    transition: 1s;
+    z-index: -2;
 }
 .menu-item {
-        display: block;
-        padding: 10px 0;
-        text-align: center;
-        color: #fff;
-        z-index: -2;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    z-index: -2;
 }
 
 .menu.menu-open .icon span:nth-child(1) {
